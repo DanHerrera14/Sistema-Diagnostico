@@ -1,0 +1,19 @@
+.plantilla{
+    width: 820px !important;
+  }
+.encabezado{
+    background-color: orange;
+    width: 820px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+.container{
+  width: 850px !important;
+}
+
+img{
+  width: 60%;
+  margin-top: 13px;
+
+}

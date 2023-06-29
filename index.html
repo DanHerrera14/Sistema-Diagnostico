@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <title>Sistema de Diagnóstico</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    
+</head>
+<script src="script.js"></script>
+<body>
+  <main>
+    <div class="container">
+
+      <div class="plantilla" id="plantilla">
+      <div class="row">
+        <div class="col-10">
+          <div class="col">
+            <h1 style="border-bottom: orange solid 2px;">Maldonado Consultores</h1>
+          </div>
+          <div class="col">
+            <p>Asesoría Financiera, Administrativa, Planeación estratégica y Sistema de calidad.</p>
+          </div>
+        </div>
+        <div class="col-2">
+          <img src="https://maldonadoconsultores.com/wp-content/uploads/2023/02/Logo-R-invertida.png" alt="">
+        </div>
+      </div>
+
+      <div class="Datos">
+        <table class="table formato" id="formato">
+          <div class="encabezado"><p>Datos Empresariales</p></div>
+            <tbody>
+              <tr>
+                <td>Nombre del Empresario</td>
+                <td colspan="2"><input type="text" id="nombre" class="form-control" placeholder="Nombre" aria-label="Username" aria-describedby="basic-addon1"></td>      
+              </tr>
+              <tr>
+                <td>Teléfono de contacto</td>
+                <td><input type="text" id="telefono" class="form-control" placeholder="Telefono" aria-label="Username" aria-describedby="basic-addon1"></td>
+              </tr>
+              <tr>
+                <td>Giro</td>
+                <td><input type="text" id="giro" class="form-control" placeholder="Giro" aria-label="Username" aria-describedby="basic-addon1"></td>
+              </tr>
+              <tr>
+                <td>Calificación</td>
+                <td id="total5"></td>
+              </tr>
+              <tr>
+                <td>Fecha</td>
+                <td><input type="datetime-local" id="datetime" class="form-control" placeholder="Fecha y Hora" aria-label="Username" aria-describedby="basic-addon1"></td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+      
+
+        <div id="table1">
+          <table class="table fot formato">
+              <div class="encabezado"><p>Resultado Diagnóstico</p></div>
+              <thead>
+                <tr>
+                  <th colspan="2" scope="col">Resumen ejecutivo de la Empresariales</th>
+                  <th>Respuesta</th>
+                  <th>Valor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="2">¿Tiene definido los objetivos de su empresa</td>
+                  <td id="">
+                    <select id="data1"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                      <option value="20">Si</option>
+                      <option value="0" >No</option>
+                   </select>
+                  </td>
+                  <td id="re"></td>
+
+                </tr>
+                <tr>
+                  <td colspan="2">¿Tiene definida la misión de su empresa?</td>
+                  <td id="">
+                    <select id="data2"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                      <option value="20">Si</option>
+                      <option value="0" >No</option>
+                   </select>
+                  </td>
+                  <td id="re2"></td>
+                </tr>
+                <tr>
+                  <td colspan="2">¿Tiene definida la visión de su empresa?</td>
+                  <td id="">
+                    <select id="data3"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                      <option value="20">Si</option>
+                      <option value="0" >No</option>
+                   </select>
+                  </td>
+                  <td id="re3"></td>
+                </tr>
+                <tr>
+                  <td colspan="2">¿Cuenta con el organigrama de su empresa?</td>
+                  <td id="">
+                    <select id="data4"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                      <option value="20">Si</option>
+                      <option value="0" >No</option>
+                   </select>
+                  </td>
+                  <td id="re4"></td>
+                </tr>
+                <tr>
+                  <td colspan="2">¿Tiene asesores externos?</td>
+                  <td id="">
+                    <select id="data5"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                      <option value="7">Si</option>
+                      <option value="0" >No</option>
+                   </select>
+                  </td>
+                  <td id="re5"></td>
+                </tr>
+                <tr>
+                  <td colspan="2">¿Cuenta con dos o más propietarios y/o accionistas?</td>
+                  <td id="">
+                    <select id="data6"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                      <option value="13">Si</option>
+                      <option value="0" >No</option>
+                   </select>
+                  </td>
+                  <td id="re6"></td>
+                </tr>
+                <tr>
+                  <td colspan="3">Total</td>
+                  <td id="total1"></td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+      
+      <div class="tabla2">
+        <table class="table formato">
+          <thead>
+            <tr>
+              <th colspan="2" scope="col">Historia y Situación actual</th>
+              <th>Respuesta</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">¿Cuál es su facturación aproximada mensual?</td>
+                <td id="">
+                  <select id="data7"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>Pesos</option>
+                    <option value="45" id="">Más de $999,999.00 MXN</option>
+                    <option value="25" id="">Más de $500,000.00 MXN</option>
+                    <option value="15" id="">Más de $99,000.00 MXN</option>
+                    <option value="0" id="">Menos de $99,000.00 MXN</option>
+                 </select>
+                </td>
+                <td id="re7"></td>
+              </tr>
+              <tr>
+                <td colspan="2">¿Cuenta con la información de sus costos mensual,<br> anual o de más de un año</td>
+                <td id="">
+                  <select id="data8"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option value="30" id="">Si</option>
+                    <option value="0" id="">No</option>
+                 </select>
+                </td>
+                <td id="re8"></td>
+              </tr>
+              <tr>
+                <td colspan="2">Descripción de sus servicios</td>
+                <td id="">
+                  <select id="data9"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>Sector</option>
+                    <option value="25" id="">Sector Primario</option>
+                    <option value="25" id="">Sector Secundario</option>
+                    <option value="25" id="">Sector Terceario</option>
+                 </select>
+                </td>
+                <td id="re9"></td>
+              </tr>
+              <tr>
+                <td colspan="">Total</td>
+                <td id="total2"></td>
+              </tr>
+              
+            </tbody>
+          </table>
+    </div>
+
+    <div class="tabla3">
+      <table class="table formato">
+        <thead>
+          <tr>
+            <th colspan="2" scope="col">Situación Estratégica y Acceso a Tecnología</th>
+            <th>Respuesta</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+          <tbody>
+            <tr>
+              <td colspan="2">¿Cuenta con herramientas tecnológicas como <br> computadoras, paqueterías de ofimática?</td>
+              <td id="">
+                <select id="data10"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                  <option selected>Tecnologia</option>
+                  <option value="10" id="">Equipos</option>
+                  <option value="10" id="">Hardware</option>
+                  <option value="10" id="">Sotware</option>
+                  <option value="0" id="">No cuento con tecnología</option>
+               </select>
+              </td>
+              <td id="re10"></td>
+            </tr>
+            <tr>
+              <td colspan="2">Servicios futuros: ¿Desea desarrollar nuevas líneas<br> de negocio?</td>
+              <td id="">
+                <select id="data11"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                  <option value="15" id="">Si</option>
+                  <option value="0" id="">No</option>
+               </select>
+              </td>
+              <td id="re11"></td>
+            </tr>
+            <tr>
+              <td colspan="2">¿Cuenta usted con plan de marketing o estrategia <br> comercial?</td>
+              <td id="">
+                <select id="data12"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                  <option value="20" id="">Si</option>
+                  <option value="0" id="">No</option>
+               </select>
+              </td>
+              <td id="re12"></td>
+            </tr>
+            <tr>
+              <td colspan="2">¿Realiza capacitaciones mensuales al personal de su<br> empresa?</td>
+              <td id="">
+                <select id="data13"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                  <option value="20" id="">Si</option>
+                  <option value="0" id="">No</option>
+               </select>
+              </td>
+              <td id="re13"></td>
+            </tr>
+            <tr>
+              <td colspan="2">¿Conoce su competencia?</td>
+              <td id="">
+                <select id="data14"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                  <option value="15" id="">Si</option>
+                  <option value="0" id="">No</option>
+               </select>
+              </td>
+              <td id="re14"></td>
+            </tr>
+            <tr>
+              <td colspan="3">Total</td>
+              <td id="total3"></td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+
+
+  <div class="tabla4">
+    <table class="table formato">
+        <thead>
+          <tr>
+            <th colspan="2" scope="col">Identificación de Procesos</th>
+            <th>Respuesta</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="2">¿Cuenta con la descripción de puestos de su empresa?</td>
+            <td id="">
+              <select id="data15"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option value="60" id="">Si</option>
+                <option value="0" id="">No</option>
+             </select>
+            </td>
+            <td id="re15"></td>
+            
+          </tr>
+          <tr>
+            <td colspan="2">¿Cuenta con su área definidas(organigrama)?</td>
+            <td id="">
+              <select id="data16"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option value="20" id="">Si</option>
+                <option value="0" id="">No</option>
+             </select>
+            </td>
+            <td id="re16"></td>
+          </tr>
+          <tr>
+            <td colspan="2">¿Cuenta con sus prodecimiento documentados?</td>
+            <td id="">
+              <select id="data17"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option value="20" id="">Si</option>
+                <option value="0" id="">No</option>
+             </select>
+            </td>
+            <td id="re17"></td>
+          </tr>
+          <tr>
+            <td colspan="3">Total</td>
+            <td id="total4"></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<div class="encabezado"><p>Sugerencia de servicios de maldonado consultores</p></div>
+<div>
+  <p>De acuerdo a la información proporcionada en el diagnóstico, a continuación brindaremos la <br> siguiente lista de servicios.</p>
+  <ul>
+    <li>Creación de modelos de crecimiento y desarrollo. </li>
+    <li>Creación de gobierno corporativo.</li>
+  </ul>
+  
+</div>
+    </div>
+    <button type="button" id="" name="mostrar" onclick="evaluar()" class="btn btn-primary" value="Enviar">Evaluar</button>
+ 
+  </div>
+   </main>
+  <script src="enviar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+</html>
